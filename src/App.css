@@ -1,38 +1,125 @@
-.App {
+/* Container principal, que contem todos os outros arquivos e containers */
+.container {
+  background-image: url("./assets/795093-3840x2160-desktop-4k-gradient-wallpaper-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Estilo do menu de filtros */
+.Filtrar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  margin-left: auto;
+  padding: 10px;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/* Estilo do container que aparece 
+a lista de tarefas quando o usuario as adiciona */
+.lista {
+  height: 100%;
+  width: 800px;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.lista ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo das caixas que aparecem com as tarefas do usuario */
+.lista li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #ee7f27, #de4a12, #dc3411, #dc2414);
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+  width: 750px;
+}
+/* Estilo do container em que se localiza a checkbox para marcar 
+tarefas concluidas */
+.container-checkbox {
+  flex: 0 0 auto;
+  border: 2px red;
+  background-color: #dc2414;
+  border-radius: 5px;
+}
+
+/* Cor do texto das tarefas adiconadas */
+.texto {
+  flex: 1;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+}
+/* Container do botão de deletar tarefas com um X */
+.container-botao {
+  flex: 0 0 auto;
+}
+/* Estilo do botão de deletar, incluindo sua imagem de fundo */
+.botao-deletar {
+  padding: 10px;
+  border: none;
+  color: white;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: url(./assets/d3826a943b0d3a9d54ec3d3cba01d0ef.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Estilo do titulo principal */
+.titulo {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 50px;
+  font-weight: 100;
+  font-family: "Courier New", Courier, monospace;
+}
+/* Estilo da box de adicionar tarefas */
+.adicionar {
+  width: 500px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* Estilo do campo de input onde o usuario digita a tarefa e a descrição */
+input {
+  font-size: 15px;
+  padding: 8px;
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 8px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo do botão de "adicionar" e dos botões do filtro */
+.botao {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid black;
 }
